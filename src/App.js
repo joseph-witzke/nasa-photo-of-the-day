@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios'
+//import components
+import Nav from './components/nav'
+import Buttons from "./components/buttons";
 
 
 function App() {
@@ -18,20 +21,12 @@ function App() {
   }, [])
 
   return (
-    <>
-    <header>
-      <nav></nav>
-      <nav></nav>
-      <nav></nav>
-    </header>
     <div className="App">
       <h1>{nasaData.title}</h1>
-        <img src={nasaData.hdurl}/>
+      <Nav />
+      <img src={nasaData.hdurl}/>
+      <Buttons />
     </div>
-    <div>
-
-    </div>
-    </>
   );
 }
 
